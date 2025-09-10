@@ -196,8 +196,8 @@ body {
            SEÇÃO HERO 
            =========================================== */
 .hero {
-    padding-top: 100px;
-    min-height: calc(100vh - 20px);
+    padding-top: 80px;
+    min-height: calc(100vh);
     display: flex;
     align-items: center;
     background: linear-gradient(135deg,
@@ -501,6 +501,10 @@ html {
         --space-xl: 2rem;
         --space-2xl: 2.5rem;
     }
+    .hero {
+    padding-top: 100px !important;
+    min-height: calc(100vh - 20px) !important;
+}
 
     .nav-links {
         display: none;
