@@ -188,8 +188,6 @@ body {
     width: 25px;
     height: 3px;
     background: var(--text-primary);
-    padding-top: 80px;
-    /* Adicione esta linha */
     margin: 3px 0;
     transition: var(--transition);
 }
@@ -198,7 +196,8 @@ body {
            SEÇÃO HERO 
            =========================================== */
 .hero {
-    min-height: 100vh;
+    padding-top: 100px;
+    min-height: calc(100vh - 20px);
     display: flex;
     align-items: center;
     background: linear-gradient(135deg,
@@ -420,13 +419,6 @@ body {
 .cta h2 {
     font-size: var(--h2-size);
     margin-bottom: var(--space-md);
-
-    .hero {
-        padding-top: 100px;
-        /* Adicione esta linha - mais espaço no mobile */
-        min-height: calc(100vh - 20px);
-        /* Opcional: ajusta altura */
-    }
 }
 
 .cta p {
