@@ -109,6 +109,24 @@ body {
 /* ===========================================
            HEADER E NAVEGAÇÃO 
            =========================================== */
+section[id] {
+    scroll-margin-top: 70px;
+    
+}
+
+#inicio {
+    scroll-margin-top: 0;
+    
+}
+
+#servicos,
+#como-funciona,
+#faq,
+#contato {
+    scroll-margin-top: 100px;
+    
+}
+
 .header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -176,7 +194,7 @@ body {
     width: 100%;
 }
 
-/* Mobile menu - Adicione JavaScript para toggle */
+/* Mobile menu -  */
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -390,7 +408,7 @@ body {
 }
 
 /* ===========================================
-           SEÇÃO CTA (CALL TO ACTION) 
+           SEÇÃO CTA 
            =========================================== */
 .cta {
     padding: var(--space-2xl) 0;
@@ -467,6 +485,7 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
 }
+
 /* ===========================================
            SEÇÃO FAQ 
            =========================================== */
