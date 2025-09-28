@@ -1,12 +1,10 @@
-// MODIFIQUE ESTE NÚMERO PARA SEU WHATSAPP
-const WHATSAPP_NUMBER = '5562999999999'; // Formato: código do país + DDD + número
 
-// MODIFIQUE ESTA MENSAGEM PADRÃO
+const WHATSAPP_NUMBER = '5562999999999'; // numero para WPP
+
+//mensagem wpp
 const DEFAULT_MESSAGE = 'Olá! Gostaria de agendar um atendimento psicológico na Unialfa.';
 
-// ==========================================
 // FUNÇÕES UTILITÁRIAS
-// ==========================================
 
 // Função para criar URL do WhatsApp
 function createWhatsAppURL(message = DEFAULT_MESSAGE) {
@@ -35,9 +33,7 @@ function handleIntersection(entries, observer) {
     });
 }
 
-// ==========================================
 // INICIALIZAÇÃO QUANDO DOM CARREGAR
-// ==========================================
 
 document.addEventListener('DOMContentLoaded', function () {
     // Configurar botões do WhatsApp
@@ -60,9 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('📱 WhatsApp configurado para:', WHATSAPP_NUMBER);
 });
 
-// ==========================================
 // CONFIGURAÇÃO DOS BOTÕES WHATSAPP
-// ==========================================
+
 
 function setupWhatsAppButtons() {
     const whatsappBtns = document.querySelectorAll('#whatsappBtn, #whatsappCta');
@@ -83,17 +78,11 @@ function setupWhatsAppButtons() {
             const whatsappURL = createWhatsAppURL(customMessage);
             window.open(whatsappURL, '_blank');
 
-            // Analytics (se você usar Google Analytics, descomente a linha abaixo)
-            // gtag('event', 'click', { 'event_category': 'WhatsApp', 'event_label': 'CTA Button' });
-
             console.log('🚀 Redirecionando para WhatsApp...');
         });
     });
 }
-
-// ==========================================
 // NAVEGAÇÃO SUAVE
-// ==========================================
 
 function setupSmoothNavigation() {
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -113,9 +102,7 @@ function setupSmoothNavigation() {
     });
 }
 
-// ==========================================
 // HEADER COM SCROLL
-// ==========================================
 
 function setupHeaderScroll() {
     const header = document.getElementById('header');
@@ -135,9 +122,7 @@ function setupHeaderScroll() {
     });
 }
 
-// ==========================================
 // ANIMAÇÕES NO SCROLL
-// ==========================================
 
 function setupScrollAnimations() {
     // Verificar se browser suporta Intersection Observer
@@ -166,9 +151,7 @@ function setupScrollAnimations() {
     }
 }
 
-// ==========================================
 // MENU MOBILE
-// ==========================================
 
 function setupMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -228,7 +211,7 @@ function setupLazyLoading() {
         images.forEach(img => imageObserver.observe(img));
     }
 }
-// FAQ Toggle Functionality
+// FAQ 
 document.addEventListener('DOMContentLoaded', function () {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -314,29 +297,16 @@ const styleSheet = document.createElement('style');
 styleSheet.textContent = mobileMenuStyles;
 document.head.appendChild(styleSheet);
 
+//botao zapzap
+const whatsappBtn = document.getElementById('whatsapp-btn');
 
-
-/*function setupContactForm() {
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const phone = formData.get('phone');
-            const message = formData.get('message');
-            
-            const whatsappMessage = `Olá! Meu nome é ${name}.
-Telefone: ${phone}
-Mensagem: ${message}
-            
-Gostaria de agendar um atendimento psicológico na Unialfa.`;
-            
-            const whatsappURL = createWhatsAppURL(whatsappMessage);
-            window.open(whatsappURL, '_blank');
-        });
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) { 
+        whatsappBtn.style.display = 'flex';
+    } else {
+        whatsappBtn.style.display = 'none';
     }
-}
- 
-*/
+});
+
+// Inicialmente escondido
+whatsappBtn.style.display = 'none';
