@@ -1,7 +1,7 @@
 
 // CONFIGURAÇÕES 
 const CONFIG = {
-    EMAIL_DESTINO: 'nabogip359@gamepec.com',
+    EMAIL_DESTINO: 'psicologiaunialfa4@gmail.com',
     ANIMATION_DELAY: 100,
     SCROLL_OFFSET: 80,
     THROTTLE_DELAY: 16,
