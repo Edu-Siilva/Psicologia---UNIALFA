@@ -1,4 +1,4 @@
-
+//
 // CONFIGURAÇÕES 
 const CONFIG = {
     EMAIL_DESTINO: 'psicologiaunialfa4@gmail.com',
